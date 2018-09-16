@@ -1,7 +1,8 @@
-<h1>Front-end part</h1>
+<h1>Back-end part</h1>
 <br/>
 <h2>Project dependency</h2>
 <ul> 
-    <li>Something</li>
-    <li>. . . </li>
+    <li>Spring boot framework</li>
+    <li>Apache Maven</li>
+    <li>. . .</li>
 </ul>
