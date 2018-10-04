@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
 
 const Header = (props) => {
 
   return (
     <div className="content__header">
-      <p class="content__header__title">Phan mem ho tro tim tuyen xe bus</p>
+      <p className="content__header__title">Phan mem ho tro tim tuyen xe bus</p>
 
       <nav className="content__menu">
         <ul >
