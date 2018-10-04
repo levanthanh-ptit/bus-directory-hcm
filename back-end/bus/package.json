@@ -1,0 +1,25 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "<h1>Front-end part</h1> <br/> <h2>Project dependency</h2> <ul>      <li>Something</li>     <li>. . . </li> </ul>",
+  "main": "index.js",
+  "scripts": {
+    "start": "node fuse",
+    "build": "node fuse --production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fuse-box": "^3.5.0",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-google-maps": "^9.4.5",
+    "react-router-dom": "^4.3.1",
+    "reactstrap": "^6.4.0",
+    "recompose": "^0.30.0"
+  }
+}
