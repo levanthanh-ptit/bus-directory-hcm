@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Header } from './component/header'
-import { SearchBus } from './component/SearchBus'
+import { BusList } from './Container/BusList'
 
 
 class App extends React.Component{
@@ -9,7 +9,7 @@ class App extends React.Component{
       <div className="background">
         <div className="content">
           <Header/>
-          <SearchBus/>
+          <BusList/>
         </div>
       </div>    
     )
