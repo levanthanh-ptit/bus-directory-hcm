@@ -1,0 +1,21 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+@import "variable";
+@import "header";
+@import "background";
+@import "content";
