@@ -23,13 +23,3 @@
 /dist/
 /nbdist/
 /.nb-gradle/
-
-
-#fusebox
-.fusebox
-.vscode
-public/
-
-# Node and Webpack files
-node_modules/
-npm-debug.log
