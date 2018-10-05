@@ -1,7 +1,33 @@
 import * as React from 'react'
+import Map from '../component/Map'
+import { Marker } from 'react-google-maps'
+import { BusScheduleBox } from '../component/BusScheduleBox'
 
 
 class BusDetail extends React.Component {
+
+    state = {
+        loading: true,
+        loadingMap: true,
+        center: {
+            lat: null,
+            lng: null,
+        },
+        busdetail: null,
+    }
+
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(location => {
+            this.setState({
+                center: {
+                    lat: location.coords.latitude,
+                    lng: location.coords.longitude
+                },
+                loadingMap: false,
+            })
+        })
+
+    }
 
     render() {
         return (
@@ -17,6 +43,17 @@ class BusDetail extends React.Component {
                         -Đông Du-Thi Sách-Công trường Mê Linh</p></div>
                     <div><label className="busdetail__content__label">Don vi dam nham</label><p>
                         Công ty Cổ phần Xe khách Sài Gòn, ĐT: (028)39505505</p></div>
+                </div>
+                <div className="busdetail__schedule">
+                        <BusScheduleBox />
+                    {!this.state.loadingMap ?
+                        <Map
+                            center={this.state.center}
+                        >
+                            <Marker position={this.state.center} />
+                        </Map> : null
+                    }
+
                 </div>
             </div >
         )
