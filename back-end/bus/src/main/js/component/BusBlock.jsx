@@ -22,7 +22,7 @@ const BusBlocks = () => {
     return(
         <div className="bus_list">
             
-            <Link to="/busdetail/:id"><BusBlock/></Link>
+            <Link to="/buses/1"><BusBlock/></Link>
             <Link to="/busdetail/:id"><BusBlock/></Link>
             <Link to="/busdetail/:id"><BusBlock/></Link>
             <Link to="/busdetail/:id"><BusBlock/></Link>

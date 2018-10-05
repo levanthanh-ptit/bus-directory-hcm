@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Header } from './component/header'
 import { BusList } from './Container/BusList'
+import { BusDetail } from './Container/BusDetail'
+import { Route } from 'react-router-dom'
 
 
 class App extends React.Component{
@@ -9,7 +11,8 @@ class App extends React.Component{
       <div className="background">
         <div className="content">
           <Header/>
-          <BusList/>
+          <Route exact path='/danhsachtuyen' component={BusList}></Route>
+          <Route exact path='/buses/:id' component={BusDetail}></Route>
         </div>
       </div>    
     )
