@@ -1,5 +1,24 @@
-.busdt {
-    &__primary_title {
-        
+.busdetail {
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem;
+        background-color: rgba($color-gray, 0.5);
+        margin-top: 2rem;
     }
+    
+    &__content {
+        background-color: rgba($color-gray, 0.1);
+        height: 50vh;
+        width: 95%;
+        border-bottom:1px solid rgba($color-gray, 0.3);
+        border-left:1px solid rgba($color-gray, 0.3);
+        border-right:1px solid rgba($color-gray, 0.3);
+        margin: 0 auto;
+
+        &__label {
+            font-size: 1.5rem;
+            
+        }
+    }   
 }
