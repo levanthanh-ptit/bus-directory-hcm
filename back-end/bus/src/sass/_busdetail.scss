@@ -1,0 +1,57 @@
+.busdetail {
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem;
+        background-color: rgba($color-gray, 0.5);
+        margin-top: 2rem;
+    }
+
+    &__schedule {
+        @include clearfix;
+        width: 95%;
+        margin: 0 auto;
+        height: 50rem;;
+        &__map {
+            width: 75%;
+            height: 100%;
+            z-index: 0;
+            float: left;
+        }
+
+        &__box {
+            height: 100%;
+            width: 25%;
+            border:1px solid rgba($color-gray, 0.3);
+            float: left;
+
+            &__item {
+                width: 95%;
+                margin: 0.5rem auto;
+                height: 3rem;
+                background-color: aliceblue;
+                border: 1px solid rgba($color-gray, 0.3);
+
+                &:hover {
+                    background-color: $color-green;
+                }
+            }
+        }
+
+    }
+
+    &__content {
+        background-color: rgba($color-gray, 0.1);
+        height: 50vh;
+        width: 95%;
+        border-bottom: 1px solid rgba($color-gray, 0.3);
+        border-left: 1px solid rgba($color-gray, 0.3);
+        border-right: 1px solid rgba($color-gray, 0.3);
+        margin: 0 auto;
+
+        &__label {
+            font-size: 1.5rem;
+
+        }
+    }
+}
