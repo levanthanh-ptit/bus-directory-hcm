@@ -19,7 +19,8 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
  
 @SpringBootApplication
  
-@EnableAutoConfiguration(
+@EnableAutoConfiguration
+		(
 		exclude = { //
         DataSourceAutoConfiguration.class, //
         DataSourceTransactionManagerAutoConfiguration.class, //

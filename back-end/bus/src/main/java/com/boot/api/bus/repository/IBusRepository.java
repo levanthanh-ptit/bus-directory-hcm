@@ -1,15 +1,18 @@
 package com.boot.api.bus.repository;
 
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
 import com.boot.api.bus.entity.Bus;
-import java.util.Collection;
-import org.springframework.dao.DataAccessException;
 
+@Repository
 public interface IBusRepository {
+	public boolean save(final Bus bus);
 
-	Collection<Bus> findByRouteNumber(String RouteNumber) throws DataAccessException;
+	public List<Bus> findAll();
 
-	Bus findById(int id) throws DataAccessException;
+	public Bus findById(long id);
 
-	void save(Bus bus) throws DataAccessException;
-
+	public void delete(final Bus bus);
 }

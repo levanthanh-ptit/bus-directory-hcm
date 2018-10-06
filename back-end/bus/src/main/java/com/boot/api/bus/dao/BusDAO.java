@@ -4,10 +4,8 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 
 import com.boot.api.bus.entity.Bus;
-import com.boot.api.bus.models.BusInfo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -22,9 +20,15 @@ public class BusDAO {
 	public BusDAO() {
 	}
 
-	public void save(final Bus bus) {
+	public boolean save(final Bus bus) {
+		try {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.save(bus);
+		return true;
+		}
+		catch(Exception e) {
+			return false;			
+		}
 	}
 
 	public List<Bus> findAll() {
