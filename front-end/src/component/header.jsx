@@ -12,8 +12,7 @@ const Header = (props) => {
         <ul >
           <Link to='/trangchu'><li>Trang chủ</li></Link>
           <Link to='/danhsachtuyen'><li className="">Tuyến</li></Link>
-          <li className="">Ban do</li>
-          <li className="">Tìm đường</li>
+          <Link to='/timduong'><li className="">Tìm đường</li></Link>
         </ul>
       </nav>
     </div>

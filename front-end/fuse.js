@@ -43,7 +43,7 @@ const fuse = FuseBox.init({
 })
 
 const bundle = fuse.bundle('app')
-  .instructions('> main/js/index.jsx')
+  .instructions('> index.jsx')
 
 if (development) {
   bundle.hmr({

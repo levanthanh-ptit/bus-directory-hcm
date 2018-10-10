@@ -2,6 +2,8 @@ import * as React from 'react'
 import Map from '../component/Map'
 import { Marker } from 'react-google-maps'
 import { BusScheduleBox } from '../component/BusScheduleBox'
+import { compose } from 'recompose'
+import { withMapDetailStyle } from '../hoc/withMapstyle'
 
 
 class BusDetail extends React.Component {
@@ -30,6 +32,8 @@ class BusDetail extends React.Component {
     }
 
     render() {
+        const Mapstyle = compose(withMapDetailStyle)(Map);
+
         return (
             <div>
                 <p className="busdetail__title">Thong tin tuyen xe buyt so 1</p>
@@ -47,11 +51,11 @@ class BusDetail extends React.Component {
                 <div className="busdetail__schedule">
                         <BusScheduleBox />
                     {!this.state.loadingMap ?
-                        <Map
+                        <Mapstyle
                             center={this.state.center}
                         >
                             <Marker position={this.state.center} />
-                        </Map> : null
+                        </Mapstyle> : null
                     }
 
                 </div>
