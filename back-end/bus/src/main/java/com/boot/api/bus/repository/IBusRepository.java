@@ -15,4 +15,6 @@ public interface IBusRepository {
 	public Bus findById(long id);
 
 	public void delete(final Bus bus);
+	
+	public Bus findByRouteNumber(int num);
 }

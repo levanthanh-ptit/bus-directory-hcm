@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Repository;
@@ -44,6 +45,12 @@ public class JpaBusRepository implements IBusRepository {
 	public void delete(final Bus bus) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.remove(bus);
+	}
+
+	@Override
+	public Bus findByRouteNumber(int num) {
+		Session session = this.sessionFactory.getCurrentSession();
+		return session.createQuery("FROM Bus WHERE number =:num", Bus.class).setParameter("num", num).getSingleResult();
 	}
 
 }
