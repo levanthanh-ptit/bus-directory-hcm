@@ -1,6 +1,7 @@
 package com.boot.api.bus.repository.jpa;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,15 +21,11 @@ public class JpaBusRepository implements IBusRepository {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public boolean save(final Bus bus) {
-		try {
+	public void save(Bus bus) {
 		Session session = this.sessionFactory.getCurrentSession();
+		UUID uuid = UUID.randomUUID();
+		bus.setId(uuid.toString());	
 		session.save(bus);
-		return true;
-		}
-		catch(Exception e) {
-			return false;			
-		}
 	}
 
 	@Override
