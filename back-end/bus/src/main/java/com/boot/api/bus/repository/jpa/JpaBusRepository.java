@@ -1,40 +1,52 @@
 package com.boot.api.bus.repository.jpa;
 
-import java.util.Collection;
+import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.boot.api.bus.entity.Bus;
 import com.boot.api.bus.repository.IBusRepository;
 
 @Repository
+@Transactional
 public class JpaBusRepository implements IBusRepository {
 
-	@PersistenceContext
-    private EntityManager em;
-	
+	@Autowired
+	private SessionFactory sessionFactory;
+
 	@Override
-	public Collection<Bus> findByRouteNumber(String RouteNumber) throws DataAccessException {
-		String queryString = "SELECT * FROM Bus WHERE RouteNumber = " + RouteNumber;
-		 Query query = this.em.createQuery(queryString);
-	        return query.getResultList();
+	public boolean save(final Bus bus) {
+		try {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.save(bus);
+		return true;
+		}
+		catch(Exception e) {
+			return false;			
+		}
 	}
 
 	@Override
-	public Bus findById(int id) throws DataAccessException {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Bus> findAll() {
+		Session session = this.sessionFactory.getCurrentSession();
+		return session.createQuery("FROM Bus", Bus.class).getResultList();
 	}
 
 	@Override
-	public void save(Bus bus) throws DataAccessException {
-		// TODO Auto-generated method stub
-		
+	public Bus findById(long id) {
+		Session session = this.sessionFactory.getCurrentSession();
+		return session.get(Bus.class, id);
+	}
+
+	@Override
+	public void delete(final Bus bus) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.remove(bus);
 	}
 
 }
