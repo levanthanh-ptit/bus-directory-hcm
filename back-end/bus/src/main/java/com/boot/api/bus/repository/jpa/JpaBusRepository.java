@@ -1,9 +1,11 @@
 package com.boot.api.bus.repository.jpa;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Repository;
@@ -20,15 +22,11 @@ public class JpaBusRepository implements IBusRepository {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public boolean save(final Bus bus) {
-		try {
+	public void save(Bus bus) {
 		Session session = this.sessionFactory.getCurrentSession();
+		UUID uuid = UUID.randomUUID();
+		bus.setId(uuid.toString());	
 		session.save(bus);
-		return true;
-		}
-		catch(Exception e) {
-			return false;			
-		}
 	}
 
 	@Override
@@ -47,6 +45,12 @@ public class JpaBusRepository implements IBusRepository {
 	public void delete(final Bus bus) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.remove(bus);
+	}
+
+	@Override
+	public Bus findByRouteNumber(int num) {
+		Session session = this.sessionFactory.getCurrentSession();
+		return session.createQuery("FROM Bus WHERE number =:num", Bus.class).setParameter("num", num).getSingleResult();
 	}
 
 }

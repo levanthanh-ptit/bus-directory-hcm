@@ -39,11 +39,16 @@ public class BusController {
 		if (bus == null) return new ResponseEntity<Bus>(HttpStatus.NOT_FOUND);
 		return new ResponseEntity<Bus>(bus, HttpStatus.OK);
 	}
+	@RequestMapping(value = "/buses/route/{num}", method = RequestMethod.GET)
+	public ResponseEntity<Bus> findByRouteNumber(@PathVariable int num) {
+		Bus bus = jpaBusRepository.findByRouteNumber(num);
+		if (bus == null) return new ResponseEntity<Bus>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<Bus>(bus, HttpStatus.OK);
+	}
 	
 	@PostMapping("/buses")
 	public ResponseEntity<Bus> save(@RequestBody Bus bus) {
-		boolean saveStatus = jpaBusRepository.save(bus); 
-		if(!saveStatus) return new ResponseEntity<Bus>(HttpStatus.BAD_REQUEST);
+		jpaBusRepository.save(bus);
 		return new ResponseEntity<Bus>(bus, HttpStatus.CREATED);
 	}
 	

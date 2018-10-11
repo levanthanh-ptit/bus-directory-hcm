@@ -2,17 +2,15 @@ package com.boot.api.bus.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "BUS")
+@Table(name = "bus")
 public class Bus {
 	@Id
-	@GeneratedValue
-	@Column(name = "id", nullable = false)
-	private long id;
+	@Column(name = "id",length = 36, nullable = false)
+	private String id;
 
 	@Column(name = "number", nullable = false)
 	private int number;
@@ -23,20 +21,19 @@ public class Bus {
 	@Column(name = "description", length = 50, nullable = true)
 	private String description;
 
-	@Column(name = "forwardRoute", length = 500, nullable = false)
+	@Column(name = "forwardroute", length = 500, nullable = false)
 	private String forwardRoute;
 
-	@Column(name = "backRoute", length = 500, nullable = false)
+	@Column(name = "backroute", length = 500, nullable = false)
 	private String backRoute;
 	
-	@Column(name= "ticketPrice", nullable = false)
+	@Column(name= "ticketprice", nullable = false)
 	private int ticketPrice;
 	
 	public Bus() {
 	}
 
-	public Bus(long id, int number, String name, String description, String forwardRoute, String backRoute) {
-		this.id = id;
+	public Bus(int number, String name, String description, String forwardRoute, String backRoute) {
 		this.number = number;
 		this.name = name;
 		this.description = description;
@@ -44,11 +41,11 @@ public class Bus {
 		this.backRoute = backRoute;
 	}
 
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

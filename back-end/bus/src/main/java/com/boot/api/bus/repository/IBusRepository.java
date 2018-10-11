@@ -8,11 +8,13 @@ import com.boot.api.bus.entity.Bus;
 
 @Repository
 public interface IBusRepository {
-	public boolean save(final Bus bus);
+	public void save(final Bus bus);
 
 	public List<Bus> findAll();
 
 	public Bus findById(long id);
 
 	public void delete(final Bus bus);
+	
+	public Bus findByRouteNumber(int num);
 }
