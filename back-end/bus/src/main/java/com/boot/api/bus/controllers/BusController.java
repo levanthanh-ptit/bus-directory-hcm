@@ -23,7 +23,6 @@ import com.boot.api.bus.repository.jpa.JpaBusRepository;
 public class BusController {
 
 	@Autowired
-//	private BusDAO busDAO;
 	private JpaBusRepository jpaBusRepository;
 
 	@RequestMapping(value = "/buses", method = RequestMethod.GET)
