@@ -26,39 +26,52 @@ var app = express();
 var bus = require("./busStopDB.json");
 var axios = require('axios');
 var busMod = [];
-bus.forEach(element => {
-    let array = element.Routes.split(', ');
-    let flag = array.find((e) => {
-        return e == "76";
+// bus.forEach(element => {
+//     let array = element.Routes.split(', ');
+//     let flag = array.find((e) => {
+//         return e == "76";
+//     });
+//     if (flag !== undefined) {
+//         var bus76 = {
+//             id: element.StopId,
+//             route: 76,
+//             code: element.Code,
+//             name: element.Name,
+//             lng: element.Lng,
+//             lat: element.Lat
+//         }
+//         busMod.push(bus76);
+//     }
+// });
+// console.log(busMod.length);
+// busMod.forEach(element => {
+//     axios({
+//         method: 'post',
+//         url: "http://localhost:8080/api/stops",
+//         headers:{
+//             "Content-Type": "application/json" 
+//         },
+//         data: element
+//       })
+//         .then(function (response) {
+//             console.log(response);
+//         })
+//         .catch(function (error) {
+//             console.log(error);
+//         });
+// });
+axios({
+    method: 'get',
+    url: "http://api.openfpt.vn/fbusinfo/businfo/getstopsinbounds/106.770363/10.838715/106.799466/10.852189",
+    headers: {
+        "Content-Type": "application/json",
+        "api_key": "4ee53bc169c3403a914c24625fe4ca38"
+    },
+})
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
     });
-    if (flag !== undefined) {
-        var bus76 = {
-            id: element.StopId,
-            route: 76,
-            code: element.Code,
-            name: element.Name,
-            lng: element.Lng,
-            lat: element.Lat
-        }
-        busMod.push(bus76);
-    }
-});
-console.log(busMod.length);
-busMod.forEach(element => {
-    axios({
-        method: 'post',
-        url: "http://localhost:8080/api/stops",
-        headers:{
-            "Content-Type": "application/json" 
-        },
-        data: element
-      })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-});
-
 app.listen(3000);
