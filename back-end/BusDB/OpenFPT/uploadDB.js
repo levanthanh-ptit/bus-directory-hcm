@@ -62,12 +62,7 @@ var busMod = [];
 // });
 axios({
     method: 'get',
-    url: "http://api.openfpt.vn/fbusinfo/businfo/getstopsinbounds/106.770363/10.838715/106.799466/10.852189",
-    headers: {
-        "Content-Type": "application/json",
-        "api_key": "4ee53bc169c3403a914c24625fe4ca38"
-    },
-})
+    url: "http://localhost:8080/api/stops/getinbounds?lng1=106.772549&lat1=10.839028&lng2=106.791241&lat2=10.847313")
     .then(function (response) {
         console.log(response);
     })

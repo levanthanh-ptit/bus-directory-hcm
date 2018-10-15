@@ -1,10 +1,9 @@
-package com.boot.api.bus.controllers;
+	package com.boot.api.bus.controllers;
 
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.json.JsonParserFactory;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.boot.api.bus.entity.Stop;
-import com.boot.api.bus.models.StopInfo;
 import com.boot.api.bus.repository.jpa.JpaStopRepository;
 
 
