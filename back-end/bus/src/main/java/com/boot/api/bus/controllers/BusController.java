@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-//import com.boot.api.bus.dao.BusDAO;
 import com.boot.api.bus.entity.Bus;
 
 import com.boot.api.bus.repository.jpa.JpaBusRepository;
@@ -33,7 +32,7 @@ public class BusController {
 	}
 
 	@RequestMapping(value = "/buses/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Bus> findById(@PathVariable Long id) {
+	public ResponseEntity<Bus> findById(@PathVariable String id) {
 		Bus bus = jpaBusRepository.findById(id);
 		if (bus == null) return new ResponseEntity<Bus>(HttpStatus.NOT_FOUND);
 		return new ResponseEntity<Bus>(bus, HttpStatus.OK);
