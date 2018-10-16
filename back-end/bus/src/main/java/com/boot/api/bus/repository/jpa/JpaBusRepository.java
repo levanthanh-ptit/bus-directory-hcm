@@ -35,7 +35,7 @@ public class JpaBusRepository implements IBusRepository {
 	}
 
 	@Override
-	public Bus findById(long id) {
+	public Bus findById(String id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		return session.get(Bus.class, id);
 	}
@@ -51,5 +51,7 @@ public class JpaBusRepository implements IBusRepository {
 		Session session = this.sessionFactory.getCurrentSession();
 		return session.createQuery("FROM Bus WHERE number =:num", Bus.class).setParameter("num", num).getSingleResult();
 	}
+
+	
 
 }

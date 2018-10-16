@@ -12,7 +12,7 @@ public interface IBusRepository {
 
 	public List<Bus> findAll();
 
-	public Bus findById(long id);
+	public Bus findById(String id);
 
 	public void delete(final Bus bus);
 	
