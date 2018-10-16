@@ -1,8 +1,8 @@
 import * as React from "react"
 import { compose, lifecycle } from "recompose"
 import { withScriptjs } from "react-google-maps"
-import withMapStyle from "../hoc/withMapstyle"
-import withGoogleKey from "../hoc/withGoogleKey"
+import withMapStyle from "./hoc/withMapstyle"
+import withGoogleKey from "./hoc/withGoogleKey"
 import { StandaloneSearchBox } from 'react-google-maps/lib/components/places/StandaloneSearchBox'
 
 
@@ -61,7 +61,9 @@ const SearchBox = compose(
 const SearchMap = (props) => {
     return (
         <div>
-            {/* <SearchBox/> */}
+            <SearchBox/>
+            <SearchBox/>
+            <SearchBox/>
             {/* <SearchBox/> */}
         </div>
     )

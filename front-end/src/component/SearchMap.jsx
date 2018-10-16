@@ -61,8 +61,8 @@ const SearchBox = compose(
 const SearchMap = (props) => {
     return (
         <div>
-            <SearchBox/>
-            <SearchBox/>
+            <SearchBox onPlacesChanged={props.onPlacesChanged}/>
+            {/* <SearchBox/> */}
         </div>
     )
 }
