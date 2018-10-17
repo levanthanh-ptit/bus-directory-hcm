@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Map from '../component/Map'
 import { Marker } from 'react-google-maps'
-import MarkerWithLabel from 'react-google-maps/lib/components/addons/MarkerWithLabel';
 import { BusScheduleBox } from '../component/BusScheduleBox'
 import { compose } from 'recompose'
 import { withMapDetailStyle } from '../hoc/withMapstyle'
