@@ -42,7 +42,7 @@ const SearchBox = compose(
                 style={{
                     boxSizing: `border-box`,
                     border: `1px solid transparent`,
-                    width: `24rem`,
+                    width: `50rem`,
                     margin: " 1rem 1rem 0rem 1rem",
                     height: `3.2rem`,
                     padding: `2rem 1.2rem`,

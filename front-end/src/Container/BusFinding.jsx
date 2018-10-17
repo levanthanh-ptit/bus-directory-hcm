@@ -42,37 +42,21 @@ class BusFinding extends React.Component {
         })
     }
 
-    // componentDidUpdate() {
-    //     if (!this.state.isGetBoundsDone && !this.state.loadingMap && window.google.maps) {
-    //         // const googlemap = this.googlemap.current;
-    //         // console.log(googlemap)
-    //     }
-    // }
-
-
     fetchBusStops = (topleft, bottomright) => {
-        axios.get(`http://localhost:8080/api/stops/getinbounds?lng1=106.68340787887573&lat1=10.768808774874774&lng2=106.72228231430054&lat2=10.786346643944889`,
-        {
-            headers:{
-                'Access-Control-Allow-Origin': '*',
-            }
-        })
-        .then(resp => resp.json())
-        .then(resp => {
-            console.log(resp)
-        })
+        axios.get(`http://localhost:8080/api/stops/getinbounds?lng1=${topleft.lng}&lat1=${topleft.lat}&lng2=${bottomright.lng}&lat2=${bottomright.lat}`)
+        .then(resp => console.log(resp))
     }
 
     onPlacesChanged = (place) => {
         console.log(place);
 
         let topleft = {
-            lat: place[0].geometry.viewport.b.b,
-            lng: place[0].geometry.viewport.f.b,
+            lat: place[0].geometry.viewport.f.b,
+            lng: place[0].geometry.viewport.b.b,
         }
         let bottomright = {
-            lat: place[0].geometry.viewport.b.f,
-            lng: place[0].geometry.viewport.f.f,
+            lat: place[0].geometry.viewport.f.f,
+            lng: place[0].geometry.viewport.b.f,
         }
 
         this.setState({
