@@ -1,10 +1,11 @@
 import * as React from 'react'
 import Map from '../component/Map'
 import { Marker } from 'react-google-maps'
+import MarkerWithLabel  from 'react-google-maps/lib/components/addons/MarkerWithLabel';
 import { BusScheduleBox } from '../component/BusScheduleBox'
 import { compose } from 'recompose'
 import { withMapDetailStyle } from '../hoc/withMapstyle'
-
+import axios from 'axios'
 
 class BusDetail extends React.Component {
 
@@ -16,9 +17,43 @@ class BusDetail extends React.Component {
             lng: null,
         },
         busdetail: null,
+        busstops:[],
+        selectedStop:{
+            lat:null,
+            lng:null,
+        }
+    }
+
+    fetchBusdetail = () => {
+        axios.get(`http://localhost:8080/api/buses/${this.props.match.params.id}`)
+            .then(resp => {
+                this.setState({
+                    busdetail: resp.data,
+                })
+                return resp;
+            })
+            .then(resp => {
+                axios.get(`http://localhost:8080/api/stops/route/${resp.data.number}`)
+                    .then(resp => {
+                    this.setState({
+                        busstops: resp.data,
+                        loading: false,
+                    })
+                })
+            })
+    }
+
+    handleClickBusStop = (lat , lng) => {
+        this.setState({
+            selectedStop:{
+                lat: lat,
+                lng: lng,
+            }
+        })
     }
 
     componentDidMount() {
+        console.log(this.props)
         navigator.geolocation.getCurrentPosition(location => {
             this.setState({
                 center: {
@@ -28,38 +63,51 @@ class BusDetail extends React.Component {
                 loadingMap: false,
             })
         })
+        this.fetchBusdetail();
 
     }
 
     render() {
         const Mapstyle = compose(withMapDetailStyle)(Map);
-
-        return (
-            <div>
-                <p className="busdetail__title">Thong tin tuyen xe buyt so 1</p>
+        let renderBusdetai = 'Loading....';
+        if (this.state.busdetail && this.state.busstops) {
+            const { busdetail, busstops } = this.state;
+            console.log(busstops)
+            renderBusdetai = <React.Fragment><p className="busdetail__title">Thong tin tuyen xe buyt {busdetail.number}</p>
                 <div className="busdetail__content">
-                    <div><label className="busdetail__content__label">Ma so tuyen</label><p>01</p></div>
-                    <div><label className="busdetail__content__label">Ten tuyen</label><p>Ben thanh - Ben Xe cho lon</p></div>
-                    <div><label className="busdetail__content__label">Di den</label><p>Công trường
-                        Mê Linh-Thi Sách-Công trường Mê Linh-Tôn Đức Thắng-Hàm Nghi - Phó Đức Chính - Nguyễn Thái Bình - Ký Con - Trần Hưng Đạo-Nguyễn Tri Phương-Trần Phú-Trần Hưng Đạo-Châu
-                        Văn Liêm-Hải Thượng Lãn Ông-Trang Tử-Ga Chợ Lớn A</p></div>
-                    <div><label className="busdetail__content__label">Di den></label><p>	Ga Chợ Lớn A-Lê Quang Sung-Phạm Đình Hổ-Tháp Mười-Hải Thượng Lãn Ông-Châu Văn Liêm-Nguyễn Trãi-Nguyễn Tri Phương-Trần Phú-Trần Hưng Đạo -Hàm Nghi-Hồ Tùng Mậu-đường nhánh S2-Tôn Đức Thắng-Hai Bà Trưng
-                        -Đông Du-Thi Sách-Công trường Mê Linh</p></div>
+                    <div><label className="busdetail__content__label">Ma so tuyen</label><p>{busdetail.number}</p></div>
+                    <div><label className="busdetail__content__label">Ten tuyen</label><p>{busdetail.name}</p></div>
+                    <div><label className="busdetail__content__label">Di den</label><p>{busdetail.forwardRoute}</p></div>
+                    <div><label className="busdetail__content__label">Di den></label><p>{busdetail.backRoute}</p></div>
                     <div><label className="busdetail__content__label">Don vi dam nham</label><p>
                         Công ty Cổ phần Xe khách Sài Gòn, ĐT: (028)39505505</p></div>
                 </div>
                 <div className="busdetail__schedule">
-                        <BusScheduleBox />
+                    <BusScheduleBox busstops={busstops} handleClickBusStop={this.handleClickBusStop}/>
                     {!this.state.loadingMap ?
                         <Mapstyle
                             center={this.state.center}
                         >
-                            <Marker position={this.state.center} />
+                         {busstops.map(stop => {
+                            const _position={
+                                lat:stop.lat,
+                                lng:stop.lng
+                            }
+                            return <Marker position={_position} key={stop.id} />
+
+                         })}
+                        {this.state.selectedStop.lat && <MarkerWithLabel position={this.state.selectedStop}></MarkerWithLabel>}
                         </Mapstyle> : null
                     }
 
                 </div>
-            </div >
+            </React.Fragment>
+        }
+
+        return (
+            <div>
+                {renderBusdetai}
+            </div>
         )
     }
 }

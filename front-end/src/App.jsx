@@ -13,7 +13,7 @@ class App extends React.Component{
         <div className="content">
           <Header/>
           <Route exact path='/danhsachtuyen' component={BusList}></Route>
-          <Route exact path='/buses/:id' component={BusDetail}></Route>
+          <Route exact path='/buses/:id' component={(props) => <BusDetail {...props}></BusDetail>}></Route>
           <Route exact path='/timduong' component={BusFinding}></Route>
         </div>
       </div>    

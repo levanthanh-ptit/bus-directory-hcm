@@ -1,25 +1,15 @@
 import * as React from 'react'
 
 
-const BusScheduleBox = () => {
-
+const BusScheduleBox = (props) => {
     return (
         <div className='busdetail__schedule__box'>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
-            <div className='busdetail__schedule__box__item'></div>
+            {props.busstops.map(stop => {
+            return <div className='busdetail__schedule__box__item'key={stop.id} 
+                onClick={() => props.handleClickBusStop(stop.lat, stop.lng)}>
+                {stop.name}
+                </div>
+            })}
         </div>
     )
 }

@@ -44,11 +44,10 @@ class BusFinding extends React.Component {
 
     fetchBusStops = (topleft, bottomright) => {
         axios.get(`http://localhost:8080/api/stops/getinbounds?lng1=${topleft.lng}&lat1=${topleft.lat}&lng2=${bottomright.lng}&lat2=${bottomright.lat}`)
-        .then(resp => console.log(resp))
+        .then(resp => resp)
     }
 
     onPlacesChanged = (place) => {
-        console.log(place);
 
         let topleft = {
             lat: place[0].geometry.viewport.f.b,

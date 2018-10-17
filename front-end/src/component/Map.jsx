@@ -28,7 +28,6 @@ const Map = compose(
         }
     })
 )(props => {
-    console.log(props)
     return (
         <div>
             <GoogleMap

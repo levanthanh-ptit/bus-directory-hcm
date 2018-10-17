@@ -105,5 +105,21 @@
         margin: 1rem 1rem;
         font-size: 2rem;
         float: left;
+        width: 300px;
+        border: 1px solid $color-green;
+    }
+    &__block:hover{
+        background-color: $color-white;
+        &__route-num-icon{
+            background-color: $color-green;
+        }
+    }
+    &__route-num-icon{
+        display: inline;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: white;
+        color: $color-green;
     }
 }
