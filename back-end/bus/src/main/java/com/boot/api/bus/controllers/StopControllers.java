@@ -39,7 +39,7 @@ public class StopControllers {
 	}
 
 	@GetMapping("/stops/{id}")
-	public ResponseEntity<Stop> findById(@PathVariable int id) {
+	public ResponseEntity<Stop> findById(@PathVariable String id) {
 		Stop stop = jpaStopRepository.findById(id);
 		if (stop == null)
 			return new ResponseEntity<Stop>(HttpStatus.NOT_FOUND);

@@ -6,13 +6,13 @@ const Header = (props) => {
 
   return (
     <div className="content__header">
-      <p className="content__header__title">Phan mem ho tro tim tuyen xe bus</p>
+      <p className="content__header__title">Trang thông tin hỗ trợ tìm tuyến xe buýt</p>
 
       <nav className="content__menu">
         <ul >
-          <Link to='/trangchu'><li>Trang chủ</li></Link>
-          <Link to='/danhsachtuyen'><li className="">Tuyến</li></Link>
-          <Link to='/timduong'><li className="">Tìm đường</li></Link>
+          <Link to='/trangchu'><li className="content__menu__item">Trang chủ</li></Link>
+          <Link to='/danhsachtuyen'><li className="content__menu__item">Tuyến</li></Link>
+          <Link to='/timduong'><li className="content__menu__item">Tìm đường</li></Link>
         </ul>
       </nav>
     </div>

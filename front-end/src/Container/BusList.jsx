@@ -31,7 +31,7 @@ class BusList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="buslist__content__list" >
                 {!this.state.loading && this.state.buses ? <BusBlocks buses={this.state.buses} /> : "LOADING...."}
             </div>
         )

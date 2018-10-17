@@ -16,7 +16,7 @@ html {
 }
 
 @mixin clearfix {
-    display: table;
+    display: block;
     clear: both;
 }
 
@@ -26,3 +26,4 @@ html {
 @import "content";
 @import "busdetail";
 @import "busfinding";
+@import "buslist";

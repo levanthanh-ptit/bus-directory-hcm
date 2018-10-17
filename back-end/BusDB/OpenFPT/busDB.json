@@ -1,0 +1,89 @@
+[{
+        "number": "1",
+        "name": "Bến Thành- BX Chợ Lớn",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Công trường Mê Linh-Thi Sách-Công trường Mê Linh-Tôn Đức Thắng-Hàm Nghi - Phó Đức Chính - Nguyễn Thái Bình - Ký Con - Trần Hưng Đạo-Nguyễn Tri Phương-Trần Phú-Trần Hưng Đạo-Châu Văn Liêm-Hải Thượng Lãn Ông-Trang Tử-Ga Chợ Lớn A",
+        "backRoute": "Ga Chợ Lớn A-Lê Quang Sung-Phạm Đình Hổ-Tháp Mười-Hải Thượng Lãn Ông-Châu Văn Liêm-Nguyễn Trãi-Nguyễn Tri Phương-Trần Phú-Trần Hưng Đạo -Hàm Nghi-Hồ Tùng Mậu-đường nhánh S2-Tôn Đức Thắng-Hai Bà Trưng-Đông Du-Thi Sách-Công trường Mê Linh",
+        "ticketPrice": "5000"
+    },
+    {
+        "number": "76",
+        "name": "Long Phước - Suối Tiên - Đền Vua Hùng",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Hẻm 813 Long Phước-Long Phước-Long Thuận-Nguyễn Xiển-Lò Lu-Lã Xuân Oai-Làng Tăng Phú-Lê Văn Việt-Man Thiện-Lê Văn Việt-Xa lộ Hà Nội-Khu du lịch Suối Tiên-Xa lộ Hà Nội-Đường 400-Hoàng Hữu Nam-Đường số 11-Công viên Đền Vua Hùng.",
+        "backRoute": "Công viên Đền Vua Hùng - Đường số 11 - Hoàng Hữu Nam - Đường số 400 - quay đầu tại nút mở giao thông trên đường Quốc lộ 1 qua đoạn đường 13 - Quốc lộ 1 - Khu du lịch Suối Tiên - Xa lộ Hà Nội - Ngã 3 nghĩa trang Thành phố - Xa lộ Hà Nội - Lê Văn Việt - Man Thiện - Lê Văn Việt - Làng Tăng Phú - Lã Xuân Oai - Lò Lu - Nguyễn Xiển - Long Thuận - Long Phước - Hẻm 813 Long Phước.",
+        "ticketPrice": "6000"
+    },
+    {
+        "number": "57",
+        "name": "Chợ Phước Bình - Trường THPT Hiệp Bình",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Bến chợ Phước Bình (Trường trung cấp nghề TP.HCM cơ sở III) - Đại lộ 3 - Đường số 20 - Đường số 9 - Đường số 6D - Đường số 18B - Đại lộ 2 - Đỗ Xuân Hợp - Dương Đình Hội - Đình Phong Phú - Lê Văn Việt – đường nhánh Công vụ 2 - Võ Văn Ngân - Kha Vạn Cân - Hiệp Bình - Trường THPT Hiệp Bình",
+        "backRoute": "Trường THPT Hiệp Bình - Hiệp Bình - Phạm Văn Đồng - Kha Vạn Cân - Võ Văn Ngân – đường nhánh Công vụ 1 - Lê Văn Việt - Đình Phong Phú - Dương Đình Hội - Đỗ Xuân Hợp - Đại lộ 2 - Đường số 18B - Đường số 6D - Đường số 9 - Đường số 20 - Đại lộ 3 - Bến chợ Phước Bình (Trường trung cấp nghề TP.HCM cơ sở III).",
+        "ticketPrice": "5000"
+    },
+    {
+        "number": "99",
+        "name": "Chợ Thạnh Mỹ Lợi - Đại học Quốc gia",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Bến Khu dân cư Thạnh Mỹ Lợi (trước khu vui chơi thiếu nhi cách ngã 3 Trương Gia Mô - Đồng Văn Cống 100m) - Trương Gia Mô - Phạm Thận Duật - Nguyễn Khoa Đăng - Đường nội bộ khu dự án CN Sài Gòn - Lâm Quang Ky - Trương Văn Bang (UBND Quận 2) - Phan Văn Đáng - Đồng Văn Cống - Mai Chí Thọ - Xa lộ Hà Nội - Tây Hòa - Đỗ Xuân Hợp - Tăng Nhơn Phú - Đình Phong Phú - Lê Văn Việt - Hoàng Hữu Nam - Cầu Xây - Nam Cao - Quốc Lộ 1 - Quay đầu trên cầu vượt - Quốc Lộ 1 - Đường 621 - Đường A1 - Đường A5 - Đường số 5 - Đường số 7 - Ký túc xá B (Đại học Quốc Gia).",
+        "backRoute": "Ký túc xá B (Đại học Quốc Gia) - Đường trục chính số 7 - số 5 - số 1 - (rẽ trái) - Đường 621 - Song hành bờ Nam Quốc lộ 1 - Quốc lộ 1 - đường vòng dưới chân cầu vượt trạm 2 - Cầu vượt trạm 2 - (Quay đầu tại đoạn dẫn cuối cầu vượt trạm 2) - Nam Cao - Cầu Xây - Hoàng Hữu Nam - Lê Văn Việt - Đình Phong Phú - Tăng Nhơn Phú - Đỗ Xuân Hợp - Tây Hòa - Xa lộ Hà Nội - Mai Chí Thọ - Đồng Văn Cống - Bát Nàn - Trương Văn Bang (UBND Quận 2) - Nguyễn Địa Lô - Đường nội bộ khu dự án CN Sài Gòn (Bệnh viện Quốc tế Phúc An Khang)- Lâm Văn Ky - Đường nội bộ khu dự án CN Sài Gòn - Nguyễn Khoa Đăng - Phạm Thận Duật - Trương Gia Mô - Bến Khu dân cư Thạnh Mỹ Lợi (trước khu vui chơi thiếu nhi cách ngã 3 Trương Gia Mô - Đồng Văn Cống 100m).",
+        "ticketPrice": "6000"
+    },
+    {
+        "number": "2",
+        "name": "Bến Thành- BX Miền Tây",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Chỗ đậu xe buýt trên đường Thi Sách - Thi Sách - Công trường Mê Linh - Tôn Đức Thắng - Hàm Nghi – Công trường Quách Thị Trang – Lê Lai - Phạm Hồng Thái - Nguyễn Trãi - Cống Quỳnh - Nguyễn Thị Minh Khai - Nguyễn Thiện Thuật - Điện Biên Phủ - Cao Thắng - 3/2 - Minh Phụng - Hậu Giang - Kinh Dương Vương - Bến xe Miền Tây (trả khách) - Kinh Dương Vương - bãi đỗ xe buýt tại Bến xe Miền Tây",
+        "backRoute": "Bãi đỗ xe buýt tại Bến xe Miền Tây - Kinh Dương Vương - Hậu Giang - Minh Phụng - 3/2 - Cao Thắng - Cống Quỳnh – Phạm Ngũ Lão – Yersin – Trần Hưng Đạo – Hàm Nghi - Hồ Tùng Mậu - đường nhánh S2 - Tôn Đức Thắng - Hai Bà Trưng - Đông Du - Thi Sách - Chỗ đậu xe buýt trên đường Thi Sách.",
+        "ticketPrice": "5000"
+    },
+    {
+        "number": "10",
+        "name": "Đại học Quốc Gia- Bến xe Miền Tây",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Bến xe buýt A Khu đô thị ĐH Quốc Gia TP.HCM - Đường 621 - Xa lộ Hà Nội - Điện Biên Phủ - Đinh Tiên Hoàng - Võ Thị Sáu - Đường 3/2 - Nguyễn Tri Phương - Ngô Gia Tự - Hồng Bàng - Châu Văn Liêm - Hải Thương Lãn Ông - Lê Quang Sung - Phạm Đình Hổ - Hậu Giang - Kinh Dương Vương - Bến xe Miền Tây (trả khách) - Kinh Dương Vương - Chỗ đậu xe buýt tại Bến xe Miền Tây.",
+        "backRoute": "Chỗ đậu xe buýt tại Bến xe Miền Tây - Kinh Dương Vương -Hậu Giang -Tháp Mười - Hải Thượng Lãn Ông -Châu Văn Liêm - Hồng Bàng - An Dương Vương - Nguyễn Tri Phương - Đường 3/2 - Lý Thái Tổ - Điện Biên Phủ - Xa lộ Hà Nội - Quốc lộ 1A - Song Hành(Tân Lập 1 đến D1)- Xa Lộ Hà Nội - Đường 621- Bến xe buýt A Khu đô thị ĐH Quốc Gia TP.HCM.",
+        "ticketPrice": "6000"
+    },
+    {
+        "number": "15",
+        "name": "Bến Phú Định- Đầm Sen",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Chợ Phú Định(đậu xe trên đường 44 cạnh trường THPT chuyên NK TDTT Nguyễn Thị Định) - Đường 44 - Đường 41 - Phú Định - Trương Đình Hội -An Dương Vương - Hồ Học Lãm - Quốc lộ 1A - Hương lộ 2 - Hòa Bình - BÃI XE BUÝT ĐẦM SEN",
+        "backRoute": "BÃI XE BUÝT ĐẦM SEN - Hòa Bình - Vòng xoay Hòa Bình - Hòa Bình - Hương lộ 2 - Quốc lộ 1A - Hồ Học Lãm - An Dương Vương - Trương Đình Hội - Phú Định - Đường 41 - Đường 44 - Chợ Phú Định",
+        "ticketPrice": "5000"
+    },
+    {
+        "number": "107",
+        "name": "Bến xe Củ Chi - Bố Heo",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Bến xe Củ Chi - Quốc lộ 22 - Tỉnh lộ 7 - Hương lộ 2 - Bố Heo",
+        "backRoute": "Bố Heo - Hương lộ 2 - Tỉnh lộ 7 - Quốc lộ 22 - Bến xe Củ Chi",
+        "ticketPrice": "5000"
+    },
+    {
+        "number": "128",
+        "name": "Tân Điền - An Nghĩa",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Trạm y tế ấp Tân Điền - Dương Văn Hạnh - đê Soài Rạp - Lý Nhơn - Rừng Sác - Tam Thôn Hiệp - Trường THPT An Nghĩa",
+        "backRoute": "Trường THPT An Nghĩa - Tam Thôn Hiệp - Rừng Sác - Lý Nhơn - đê Soài Rạp - Dương Văn Hạnh - Trạm y tế ấp Tân Điền",
+        "ticketPrice": "6000"
+    },
+    {
+        "number": "90",
+        "name": "Phà Bình Khánh - Cần Thạnh",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Phà Bình Khánh - Rừng Sác - Duyên Hải - Đào Cử - Bến Xe Cần Thạnh",
+        "backRoute": "Bến xe Cần Thạnh - Đào Cử - Duyên Hải - Rừng Sác - Phà Bình Khánh",
+        "ticketPrice": "6000"
+    },
+    {
+        "number": "77",
+        "name": "Đồng Hòa - Cần Thạnh",
+        "description": "Phổ thông - Có trợ giá",
+        "forwardRoute": "Đình Đồng Hòa - Duyên Hải - Nguyễn Văn Mạnh - Duyên Hải - Thạnh Thới - Hòa Hiệp - Phan Trọng Huệ - Duyên Hải - Đào Cử - Tắc Suất - Quay đầu tại bến tàu Tắc Suất - Tắc Suất - Bến xe Cần Thạnh",
+        "backRoute": "Bến xe Cần Thạnh-Đào Cử-Duyên Hải-Phan Trọng Tuệ-Hòa Hiệp-Thạnh Thới-Duyên Hải-Nguyễn Văn Mạnh-Duyên Hải-Đình Đồng Hòa",
+        "ticketPrice": "5000"
+    }
+]

@@ -10,24 +10,25 @@ import javax.persistence.Table;
 public class Stop {
 
 	@Id
-	@Column(name = "id", nullable = false)
-	private int id;
-	
+	@Column(name = "id", length = 36, nullable = false)
+	private String id;
+
 	@Column(name = "route", nullable = false)
 	private int route;
-	
+
 	@Column(name = "name", length = 50, nullable = false)
 	private String name;
-	
+
 	@Column(name = "lng", nullable = false)
 	private double lng;
-	
+
 	@Column(name = "lat", nullable = false)
 	private double lat;
-	
-	public Stop() {};
-	
-	public Stop(int id, int route, String name, double lng, double lat) {
+
+	public Stop() {
+	};
+
+	public Stop(String id, int route, String name, double lng, double lat) {
 		super();
 		this.id = id;
 		this.route = route;
@@ -36,11 +37,11 @@ public class Stop {
 		this.lat = lat;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

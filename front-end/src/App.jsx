@@ -12,6 +12,7 @@ class App extends React.Component{
       <div className="background">
         <div className="content">
           <Header/>
+          <Route exact path='/trangchu' component={BusHome}></Route>
           <Route exact path='/danhsachtuyen' component={BusList}></Route>
           <Route exact path='/buses/:id' component={(props) => <BusDetail {...props}></BusDetail>}></Route>
           <Route exact path='/timduong' component={BusFinding}></Route>

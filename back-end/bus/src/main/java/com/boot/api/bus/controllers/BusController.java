@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collections;
 import java.util.List;
 
+import com.boot.api.bus.compare.CompareNumber;
 import com.boot.api.bus.entity.Bus;
 
 import com.boot.api.bus.repository.jpa.JpaBusRepository;
@@ -27,6 +29,7 @@ public class BusController {
 	@RequestMapping(value = "/buses", method = RequestMethod.GET)
 	public ResponseEntity<List<Bus>> findAll() {
 		List<Bus> buses = jpaBusRepository.findAll();
+		Collections.sort(buses,new CompareNumber());
 		if (buses.isEmpty()) return new ResponseEntity<List<Bus>>(HttpStatus.NOT_FOUND);
 		return new ResponseEntity<List<Bus>>(buses, HttpStatus.OK);
 	}

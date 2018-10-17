@@ -1,6 +1,7 @@
 package com.boot.api.bus.repository.jpa;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -21,11 +22,13 @@ public class JpaStopRepository implements IStopRepository {
 	@Override
 	public void save(Stop stop) {
 		Session session = this.sessionFactory.getCurrentSession();
+		UUID uuid = UUID.randomUUID();
+		stop.setId(uuid.toString());	
 		session.save(stop);
 	}
 
 	@Override
-	public Stop findById(int id) {
+	public Stop findById(String id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		return session.get(Stop.class, id);
 	}
