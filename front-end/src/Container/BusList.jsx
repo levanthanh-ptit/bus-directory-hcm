@@ -31,9 +31,12 @@ class BusList extends React.Component {
 
     render() {
         return (
-            <div className="buslist__content__list" >
-                {!this.state.loading && this.state.buses ? <BusBlocks buses={this.state.buses} /> : "LOADING...."}
-            </div>
+            <React.Fragment>
+                <div className="buslist__content__label">Danh sách <span className="busdetail__high_light">Tuyến</span> </div>
+                <div className="buslist__content__list" >
+                    {!this.state.loading && this.state.buses ? <BusBlocks buses={this.state.buses} /> : "LOADING...."}
+                </div>
+            </React.Fragment>
         )
     }
 }

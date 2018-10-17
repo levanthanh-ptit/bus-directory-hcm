@@ -1,5 +1,4 @@
 .content {
-    clip-path: polygon(0 1%, 100% 1%, 100% 100%, 0 100%);
     background: white;
     max-width: 960px;
     height: 100%;
@@ -8,11 +7,10 @@
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
     border: solid 1px #f2f2f2;
     margin-bottom: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 23px;
     box-sizing: border-box;
 
     &__header {
-        border-bottom: solid 1px #c5dba0;
         max-width: 960px;
         margin: 15px 0;
         padding-top: 28px;
@@ -20,9 +18,10 @@
         position: relative;
         background-image: url("../../public/img/samcoB60.jpg");
         &__title {
-            font-size: 4em;
+            font-size: 5em;
             color: #34B67A;
             text-align: center;
+            margin-bottom: 5px;
         }
     }
 
@@ -69,9 +68,9 @@
     &__menu {
         display: flex;
         justify-content: center;
-        
         background: #4d7a03;
         background-color: #34B67A;
+        border-radius: 21px;
 
         ul {
             line-height: 40px;
@@ -107,49 +106,3 @@
     }
 }
 
-.bus_list {
-
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
-
-    &__block {
-        background-color: $color-green;
-        padding: 1rem 2rem;
-        margin: 1rem 1rem;
-        font-size: 2rem;
-        float: left;
-        width: 457px;
-        border: 1px solid $color-green;
-        border-radius: 20px; 
-        display: flex;
-        align-items: center;
-    }
-    &__block:hover{
-        background-color: $color-white;
-        &__route-num-icon{
-            background-color: $color-green;
-        }
-    }
-    &__route-num-icon{
-        margin-right: 20px;
-        display: inline-block;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background: white;
-        color: $color-green;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__route-num-icon:hover{
-        background: $color-green;
-        color: $color-white;
-    }
-    &__route-lable{
-        display: inline-flex;
-    }
-}

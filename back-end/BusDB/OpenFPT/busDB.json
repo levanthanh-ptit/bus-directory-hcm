@@ -55,35 +55,11 @@
         "ticketPrice": "5000"
     },
     {
-        "number": "107",
-        "name": "Bến xe Củ Chi - Bố Heo",
-        "description": "Phổ thông - Có trợ giá",
-        "forwardRoute": "Bến xe Củ Chi - Quốc lộ 22 - Tỉnh lộ 7 - Hương lộ 2 - Bố Heo",
-        "backRoute": "Bố Heo - Hương lộ 2 - Tỉnh lộ 7 - Quốc lộ 22 - Bến xe Củ Chi",
-        "ticketPrice": "5000"
-    },
-    {
-        "number": "128",
-        "name": "Tân Điền - An Nghĩa",
-        "description": "Phổ thông - Có trợ giá",
-        "forwardRoute": "Trạm y tế ấp Tân Điền - Dương Văn Hạnh - đê Soài Rạp - Lý Nhơn - Rừng Sác - Tam Thôn Hiệp - Trường THPT An Nghĩa",
-        "backRoute": "Trường THPT An Nghĩa - Tam Thôn Hiệp - Rừng Sác - Lý Nhơn - đê Soài Rạp - Dương Văn Hạnh - Trạm y tế ấp Tân Điền",
-        "ticketPrice": "6000"
-    },
-    {
         "number": "90",
         "name": "Phà Bình Khánh - Cần Thạnh",
         "description": "Phổ thông - Có trợ giá",
         "forwardRoute": "Phà Bình Khánh - Rừng Sác - Duyên Hải - Đào Cử - Bến Xe Cần Thạnh",
         "backRoute": "Bến xe Cần Thạnh - Đào Cử - Duyên Hải - Rừng Sác - Phà Bình Khánh",
         "ticketPrice": "6000"
-    },
-    {
-        "number": "77",
-        "name": "Đồng Hòa - Cần Thạnh",
-        "description": "Phổ thông - Có trợ giá",
-        "forwardRoute": "Đình Đồng Hòa - Duyên Hải - Nguyễn Văn Mạnh - Duyên Hải - Thạnh Thới - Hòa Hiệp - Phan Trọng Huệ - Duyên Hải - Đào Cử - Tắc Suất - Quay đầu tại bến tàu Tắc Suất - Tắc Suất - Bến xe Cần Thạnh",
-        "backRoute": "Bến xe Cần Thạnh-Đào Cử-Duyên Hải-Phan Trọng Tuệ-Hòa Hiệp-Thạnh Thới-Duyên Hải-Nguyễn Văn Mạnh-Duyên Hải-Đình Đồng Hòa",
-        "ticketPrice": "5000"
     }
 ]

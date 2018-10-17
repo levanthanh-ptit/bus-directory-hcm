@@ -3,10 +3,12 @@
         font-size: 2.5em;
         text-align: center;
         padding: 1rem;
-        background-color: rgba($color-gray, 0.5);
+        background-color: #dadada;
         margin-top: 2rem;
+        width: 95%;
+        margin: 0 auto;
     }
-
+    
     &__schedule {
         @include clearfix;
         width: 95%;
@@ -77,8 +79,11 @@
         &__hot-line{
             font-size: 2em;
             display: flex;
-            margin-top: 15px;
+            margin-top: 34px;
             justify-content: flex-end;
         }
+    }
+    &__high_light{
+        color: #34B67A;
     }
 }

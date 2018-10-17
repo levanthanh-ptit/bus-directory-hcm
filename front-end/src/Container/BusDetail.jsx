@@ -34,9 +34,16 @@ class BusDetail extends React.Component {
             .then(resp => {
                 axios.get(`http://localhost:8080/api/stops/route/${resp.data.number}`)
                     .then(resp => {
-                        this.setState({
+                        var buff = resp.data;
+                        console.log(buff);
+                        
+                        this.setState({ 
                             busstops: resp.data,
                             loading: false,
+                            center: {
+                                lat: buff[0].lat,
+                                lng: buff[0].lng,
+                            },
                         })
                     })
             })
@@ -47,7 +54,11 @@ class BusDetail extends React.Component {
             selectedStop: {
                 lat: lat,
                 lng: lng,
-            }
+            },
+            center: {
+                lat: lat,
+                lng: lng,
+            },
         })
     }
 
@@ -72,23 +83,23 @@ class BusDetail extends React.Component {
         if (this.state.busdetail && this.state.busstops) {
             const { busdetail, busstops } = this.state;
             console.log(busstops)
-            renderBusdetai = <React.Fragment><p className="busdetail__title">Thông tin tuyến xe buýt {busdetail.number}</p>
+            renderBusdetai = <React.Fragment><p className="busdetail__title">Thông tin tuyến xe buýt <span className="busdetail__high_light">{busdetail.number} {busdetail.name}</span> </p>
                 <div className="busdetail__content">
                     <ul className="busdetail__content__list">
                         <li>
-                            <div><div className="busdetail__content__label"> <strong>Mã số tuyến:</strong> {busdetail.number}</div></div>
+                            <div className="busdetail__content__label"> <strong>Mã số tuyến:</strong> {busdetail.number}</div>
                         </li>
                         <li>
-                            <div><div className="busdetail__content__label"><strong>Tên tuyến:</strong>  {busdetail.name}</div></div>
+                            <div className="busdetail__content__label"><strong>Tên tuyến:</strong>  {busdetail.name}</div>
                         </li>
                         <li>
-                            <div><div className="busdetail__content__label"><strong>Loại hình hoạt động:</strong> {busdetail.name}</div></div>
+                            <div className="busdetail__content__label"><strong>Loại hình hoạt động:</strong> {busdetail.name}</div>
                         </li>
                         <li>
-                            <div><div className="busdetail__content__label"><strong>Chiều đi:</strong> {busdetail.forwardRoute}</div></div>
+                            <div className="busdetail__content__label"><strong>Chiều đi:</strong> {busdetail.forwardRoute}</div>
                         </li>
                         <li>
-                            <div><div className="busdetail__content__label"> <strong>Chiều về:</strong> {busdetail.backRoute}</div></div>
+                            <div className="busdetail__content__label"> <strong>Chiều về:</strong> {busdetail.backRoute}</div>
                         </li>
                     </ul>
                     <div className="busdetail__content__hot-line">Công ty Cổ phần Xe khách Sài Gòn, ĐT: (028)39505505</div>
@@ -108,7 +119,7 @@ class BusDetail extends React.Component {
                                 return <Marker position={_position} key={stop.id} />
 
                             })}
-                            {this.state.selectedStop.lat && <MarkerWithLabel position={this.state.selectedStop}></MarkerWithLabel>}
+                            
                         </Mapstyle> : null
                     }
 

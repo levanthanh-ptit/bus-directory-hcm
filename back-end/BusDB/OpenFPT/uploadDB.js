@@ -29,11 +29,11 @@ var busMod = [];
 bus.forEach(element => {
     let array = element.Routes.split(', ');
     let flag = array.find((e) => {
-        return e == "10";
+        return e == "77";
     });
     if (flag !== undefined) {
         var bus76 = {
-            route: 10,
+            route: 77,
             code: element.Code,
             name: element.Name,
             lng: element.Lng,

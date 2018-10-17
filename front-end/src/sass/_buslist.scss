@@ -1,8 +1,79 @@
-.buslist{
-    &__content{
-        &__list{
+.buslist {
+    &__content {
+        &__list {
             display: flex;
             justify-content: space-evenly;
+            background-color: rgba($color-gray, 0.1);
+            width: 95%;
+            border-bottom: 1px solid rgba($color-gray, 0.3);
+            border-left: 1px solid rgba($color-gray, 0.3);
+            border-right: 1px solid rgba($color-gray, 0.3);
+            margin: 0 auto;
+            padding: 15px;
+            box-sizing: border-box;
         }
+        &__label {
+            font-size: 2.5em;
+            text-align: center;
+            padding: 1rem;
+            background-color: #dadada;
+            margin-top: 2rem;
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.bus_list {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+
+    &__block {
+        background-color: $color-green;
+        padding: 1rem 2rem;
+        margin: 1rem 1rem;
+        font-size: 2rem;
+        float: left;
+        width: 418px;
+        border: 1px solid $color-green;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        color: $color-white;
+    }
+
+    &__block:hover {
+        background-color: $color-white;
+        color: $color-green;
+
+        &__route-num-icon {
+            background-color: $color-green;
+        }
+    }
+
+    &__block:hover &__route-num-icon {
+        background: $color-green;
+        color: $color-white;
+    }
+
+    &__route-num-icon {
+        margin-right: 20px;
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: white;
+        color: $color-green;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__route-lable {
+        display: inline-flex;
     }
 }
