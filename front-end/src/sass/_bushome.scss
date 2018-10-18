@@ -1,4 +1,12 @@
 .bus_home_container{
     display: flex;
     justify-content: center;
+    &__right{
+        display: block;
+        width: 65%;
+    }
+    &__left{
+        display: block;
+        width: 35%;
+    }
 }
